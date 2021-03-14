@@ -16,6 +16,14 @@ public class BookEntity implements Serializable {
     private Long bookId;
 
     @Basic
+    @Column(name = "user_id")
+    private Long userId;
+
+    @Basic
+    @Column(name = "author_id")
+    private Long authorId;
+
+    @Basic
     @Column(name = "title")
     private String title;
 
@@ -24,11 +32,11 @@ public class BookEntity implements Serializable {
     private boolean isRent;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
     private UserEntity user;
 
     @ManyToOne
-    @JoinColumn(name = "author_id", updatable = false)
+    @JoinColumn(name = "author_id", referencedColumnName = "author_id", updatable = false)
     public AuthorEntity author;
 
 
