@@ -1,5 +1,7 @@
 package com.linktera.linkteraquiz.service.base;
 
+import com.linktera.linkteraquiz.common.exception.ValidationException;
+
 import java.util.List;
 import java.util.UUID;
 
@@ -7,12 +9,12 @@ public interface BaseService<T> {
 
     List<T> getList();
 
-    T get(UUID uuid);
+    T get(Long id);
 
-    void save(T dto);
+    T save(T dto);
 
-    void update(UUID uuid, T dto);
+    void update(T dto);
 
-    void delete(UUID uuid);
+    void delete(Long id);
 
 }
