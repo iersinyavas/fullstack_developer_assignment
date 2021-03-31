@@ -1,7 +1,6 @@
 package com.linktera.linkteraquiz.service.impl;
 
 import com.linktera.linkteraquiz.common.GeneralEnum;
-import com.linktera.linkteraquiz.common.exception.ValidationException;
 import com.linktera.linkteraquiz.model.entity.BookEntity;
 import com.linktera.linkteraquiz.repository.BookRepository;
 import com.linktera.linkteraquiz.service.BookService;
