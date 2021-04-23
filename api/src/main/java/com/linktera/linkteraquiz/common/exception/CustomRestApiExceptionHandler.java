@@ -20,22 +20,4 @@ public class CustomRestApiExceptionHandler extends ResponseEntityExceptionHandle
     public static void main(String[] args) {
         System.out.println(topla(8, 17));
     }
-
-    /*    public static int sum(int a, int b){
-            int c = a&b;
-            int r = a|b;
-            while (c!=0){
-                r = r << 1;
-                c = c >> 1;
-            }
-            return r;
-        }*/
-    public static int topla(int a, int b) {
-        int sonuc = a ^ b;
-        int yanaKay = (a & b) << 1;
-        if (yanaKay != 0) {
-            return topla(sonuc, yanaKay);
-        }
-        return sonuc;
-    }
 }
